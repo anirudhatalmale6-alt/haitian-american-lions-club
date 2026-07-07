@@ -8,7 +8,7 @@
 <meta name="description" content="The First Haitian American Lions Club serves communities with pride and leads with compassion. Donate or become a member today.">
 <meta property="og:title" content="First Haitian American Lions Club">
 <meta property="og:description" content="Serving with Pride. Leading with Compassion.">
-<meta property="og:image" content="assets/community2.jpg">
+<meta property="og:image" content="assets/inauguration-1.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -158,6 +158,21 @@
   .thanks.show{display:block}
   .thanks b{color:var(--gold-soft);font-family:'Fraunces',serif;font-size:1.2rem;display:block;margin-bottom:6px}
 
+  /* ---------- Events ---------- */
+  #events{background:var(--paper)}
+  .event{display:grid;grid-template-columns:1.1fr 1fr;gap:46px;align-items:center;padding:40px 0}
+  .event + .event{border-top:1px solid var(--line)}
+  .event.reverse .event-media{order:2}
+  .event-media{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .event-lead{grid-column:span 2;border-radius:18px;overflow:hidden;aspect-ratio:16/10;box-shadow:var(--shadow)}
+  .event-lead img,.event-thumbs img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .event-lead:hover img,.event-thumbs figure:hover img{transform:scale(1.06)}
+  .event-thumbs{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .event-thumbs figure{border-radius:14px;overflow:hidden;aspect-ratio:4/3}
+  .event-date{display:inline-flex;align-items:center;gap:.5em;font-family:'Karla',sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--red);background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:100px;margin-bottom:16px}
+  .event-body h3{font-size:clamp(1.55rem,3.2vw,2.15rem);color:var(--navy);margin-bottom:14px}
+  .event-body p{color:var(--slate);font-size:1.08rem}
+
   /* ---------- Footer ---------- */
   footer{background:var(--ink);color:#cfd6e6;padding:70px 0 30px}
   .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:44px}
@@ -180,6 +195,8 @@
     .fgrid{grid-template-columns:1fr 1fr}
     .gallery{grid-template-columns:repeat(2,1fr)}
     .gallery figure:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
+    .event{grid-template-columns:1fr;gap:26px}
+    .event.reverse .event-media{order:0}
   }
   @media(max-width:680px){
     nav.links{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:#fff;flex-direction:column;align-items:stretch;justify-content:center;gap:6px;padding:40px 28px;transform:translateX(100%);transition:.35s;box-shadow:-20px 0 60px -20px rgba(0,0,0,.3)}
@@ -206,6 +223,7 @@
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav class="links" id="menu">
       <a href="#about">About</a>
+      <a href="#events">Events</a>
       <a href="#donate">Donate</a>
       <a href="#membership">Membership</a>
       <a href="#donate" class="cta">Donate Now</a>
@@ -266,12 +284,46 @@
       </div>
     </div>
 
-    <div class="gallery">
-      <figure><img src="assets/community1.jpg" alt="Members distributing food and supplies"></figure>
-      <figure><img src="assets/community2.jpg" alt="Children smiling in the community"></figure>
-      <figure><img src="assets/community4.jpg" alt="Hands united in service"></figure>
-      <figure><img src="assets/community3.jpg" alt="Joyful youth we serve"></figure>
-      <figure><img src="assets/hero.jpg" alt="Our members together"></figure>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Events &amp; Milestones</span>
+      <h2>Moments that define our journey</h2>
+      <p>From our founding celebration to the world stage — here is where the First Haitian American Lions Club has shown up to serve and represent our community.</p>
+    </div>
+
+    <div class="event">
+      <div class="event-media">
+        <figure class="event-lead"><img src="assets/inauguration-1.jpg" alt="Charter members with plaques at the inauguration"></figure>
+        <div class="event-thumbs">
+          <figure><img src="assets/inauguration-2.jpg" alt="Officers gathered before the Haitian flag"></figure>
+          <figure><img src="assets/inauguration-3.jpg" alt="Proclamation presented at the charter banquet"></figure>
+        </div>
+      </div>
+      <div class="event-body">
+        <span class="event-date">July 2024 · Miami, Florida</span>
+        <h3>First Haitian American Lions Club Inauguration</h3>
+        <p>Our charter night — where founding members, officers, and honored guests came together to officially launch the club, receive our charter, and pledge a lasting mission of service to the Haitian American community and beyond.</p>
+      </div>
+    </div>
+
+    <div class="event reverse">
+      <div class="event-media">
+        <figure class="event-lead"><img src="assets/un-summit-2.jpg" alt="Club representative speaking at the United Nations podium"></figure>
+        <div class="event-thumbs">
+          <figure><img src="assets/un-summit-1.jpg" alt="Delegation seated at the UN General Assembly"></figure>
+          <figure><img src="assets/parade.jpg" alt="Members marching with the club banner"></figure>
+        </div>
+      </div>
+      <div class="event-body">
+        <span class="event-date">July 2025 · United Nations, New York</span>
+        <h3>UN Human Rights for Education Summit</h3>
+        <p>Representing our community on the world stage — club members took part in the 18th International Human Rights Summit at the United Nations, standing for the right to education and human dignity through the Youth for Human Rights movement.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -350,9 +402,8 @@
       </div>
       <div class="fcol">
         <h4>Contact</h4>
-        <p>📍 Community Chapter, USA</p>
-        <a href="mailto:info@haitianamericanlionsclub.org">✉️ info@haitianamericanlionsclub.org</a>
-        <a href="tel:+10000000000">📞 (000) 000-0000</a>
+        <p>📍 Miramar, Florida, USA</p>
+        <a href="mailto:contact@haitianamericanlionsclub.org">✉️ contact@haitianamericanlionsclub.org</a>
         <div class="socials">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4a3.9 3.9 0 01-1.4-.9 3.9 3.9 0 01-.9-1.4c-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1a3.5 3.5 0 00-.8-1.3 3.5 3.5 0 00-1.3-.8c-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8.1a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm6.2-8.3a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg></a>
@@ -373,7 +424,7 @@
   burger.addEventListener('click',()=>menu.classList.toggle('open'));
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
   // ---- Donation form ----
-  const CLUB_EMAIL = "info@haitianamericanlionsclub.org"; // update to real club email
+  const CLUB_EMAIL = "contact@haitianamericanlionsclub.org";
   let amount = 25;
   const amtBtns = document.querySelectorAll('.amt');
   const customWrap = document.getElementById('customWrap');
